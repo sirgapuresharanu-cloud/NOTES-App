@@ -1,0 +1,134 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #0b0b12;
+    color: #ffffff;
+    display: flex;
+}
+
+/* Sidebar */
+#aside {
+    width: 350px;
+    min-height: 100vh;
+    background: #13131f;
+    padding: 40px 25px;
+    border-right: 1px solid #27273a;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container h1 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #a78bfa;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 14px 16px;
+    background: #1d1d2b;
+    border: 1px solid #343449;
+    border-radius: 10px;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #85859b;
+}
+
+input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.2);
+}
+
+/* Button */
+button {
+    padding: 14px;
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(139, 92, 246, 0.35);
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 45px;
+}
+
+.content h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #e4e4f0;
+}
+
+/* Saved Users */
+#users {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+/* User Cards (for dynamically added users) */
+#users > div {
+    background: #171725;
+    border: 1px solid #303047;
+    padding: 22px;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+#users > div:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    #aside {
+        width: 100%;
+        min-height: auto;
+        padding: 30px 20px;
+    }
+
+    .content {
+        padding: 30px 20px;
+    }
+
+    .container h1 {
+        font-size: 23px;
+    }
+}
